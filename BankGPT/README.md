@@ -49,4 +49,25 @@ Using the refined prompt approach, the chatbot eventually disclosed the protecte
 - AI systems may leak sensitive information when explaining their own restrictions
 - Defensive AI design must carefully consider how policies are communicated to users
 
+---
+
+## Prompt Injection Explained
+
+Prompt injection is an attack technique where an attacker manipulates the input given to an AI system in order to influence its behaviour in unintended ways.
+
+Unlike traditional security vulnerabilities, prompt injection does not rely on code execution or memory corruption. Instead, it exploits how large language models interpret instructions and context.
+
+In this room, the vulnerability existed because:
+- The chatbot prioritised helpfulness alongside security
+- Security rules were communicated in natural language
+- The model attempted to explain its restrictions rather than enforce them silently
+
+By asking carefully phrased questions, it was possible to:
+- Change the context of the conversation
+- Bypass guardrails without explicitly breaking rules
+- Cause the model to reveal information it was designed to protect
+
+This highlights an important lesson:  
+**If an AI can describe a restriction in detail, it may also be persuaded to violate it.**
+
 This room highlights why AI-powered systems should be treated as a serious security concern rather than a novelty.
