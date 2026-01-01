@@ -14,13 +14,16 @@ The goal of this room is to bypass BankGPT’s security controls and cause it to
 ---
 
 ## Initial Observations
+
 Upon interacting with BankGPT, several behaviours stood out immediately:
 
 - The chatbot clearly states that it follows a strict security policy
 - Direct requests for sensitive data are denied
-- The bot explains *why* certain requests are not allowed
+- The bot explains why certain requests are not allowed
 
-While this may appear secure at first glance, explaining restrictions often reveals internal logic — which can be exploited.
+![BankGPT chatbot interface showing policy-focused responses](screenshots/chatbot-interface.png)
+
+This behaviour is important, as explaining restrictions can unintentionally reveal how a system reasons internally.
 
 ---
 
