@@ -28,13 +28,9 @@ This behaviour is important, as explaining restrictions can unintentionally reve
 ---
 
 ## Attack Strategy
-Initial direct attempts to obtain sensitive information were unsuccessful, as expected.
+Have a conversation, to understand what could be asked with out settings the alarms; 
 
-Instead of continuing with direct requests, the approach shifted to understanding *how* the chatbot enforces its rules. This involved:
-
-- Asking the chatbot to explain its security policy
-- Reframing questions to focus on clarification and summarisation
-- Paying attention to how restricted information was referenced, even when not disclosed
+![BankGPT providing examples of allowed questions](screenshots/allowed-questions-example.png)
 
 By carefully adjusting prompt wording and leveraging the chatbot’s own explanations, it became possible to influence its behaviour and bypass the intended restrictions.
 
