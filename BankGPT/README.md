@@ -1,48 +1,52 @@
 # BankGPT – TryHackMe Write-Up
 
-## Room Overview
-BankGPT is a TryHackMe room focused on prompt injection attacks against an AI-powered banking assistant.  
-The chatbot is designed to follow strict security policies and avoid revealing sensitive information.
+## Overview
+BankGPT is a TryHackMe room that introduces prompt injection vulnerabilities through an AI-powered banking assistant.  
+The chatbot is designed to follow strict security policies and prevent disclosure of sensitive information.
+
+The challenge demonstrates how poorly handled policy enforcement and natural language explanations can become an attack vector.
 
 ---
 
 ## Objective
-The goal of this room is to bypass the chatbot’s security controls and retrieve protected information.
+The goal of this room is to bypass BankGPT’s security controls and cause it to disclose protected information without directly requesting it.
 
 ---
 
 ## Initial Observations
-During initial interaction, the chatbot:
-- Clearly follows a defined security policy
-- Refuses direct requests for sensitive data
-- Explains why certain requests are not allowed
+Upon interacting with BankGPT, several behaviours stood out immediately:
 
-This behaviour is important, as explaining restrictions can unintentionally reveal how a system reasons.
+- The chatbot clearly states that it follows a strict security policy
+- Direct requests for sensitive data are denied
+- The bot explains *why* certain requests are not allowed
+
+While this may appear secure at first glance, explaining restrictions often reveals internal logic — which can be exploited.
 
 ---
 
-## Attack Approach
-Direct attempts to request sensitive information were unsuccessful.
+## Attack Strategy
+Initial direct attempts to obtain sensitive information were unsuccessful, as expected.
 
-Instead, the approach shifted to:
-- Asking questions about the security policy itself
-- Reframing prompts to focus on explanation rather than extraction
-- Leveraging the chatbot’s own responses to infer how restrictions were enforced
+Instead of continuing with direct requests, the approach shifted to understanding *how* the chatbot enforces its rules. This involved:
 
-By carefully adjusting the wording of prompts, it was possible to bypass the intended restriction.
+- Asking the chatbot to explain its security policy
+- Reframing questions to focus on clarification and summarisation
+- Paying attention to how restricted information was referenced, even when not disclosed
+
+By carefully adjusting prompt wording and leveraging the chatbot’s own explanations, it became possible to influence its behaviour and bypass the intended restrictions.
 
 ---
 
 ## Flag Retrieval
-Using the refined prompt approach, the chatbot revealed the protected information, completing the challenge.
+Using the refined prompt approach, the chatbot eventually disclosed the protected information, completing the challenge.
 
-*(The flag itself is intentionally not included.)*
+*(The flag itself is intentionally omitted.)*
 
 ---
 
-## Lessons Learned
-- AI systems can leak sensitive information when explaining their own restrictions
-- Prompt injection does not require traditional exploits — language alone can be enough
-- AI security must consider how policies are communicated to users
+## Key Takeaways
+- Prompt injection attacks can succeed without technical exploits
+- AI systems may leak sensitive information when explaining their own restrictions
+- Defensive AI design must carefully consider how policies are communicated to users
 
-This room highlights AI systems as an emerging attack surface.
+This room highlights why AI-powered systems should be treated as a serious security concern rather than a novelty.
