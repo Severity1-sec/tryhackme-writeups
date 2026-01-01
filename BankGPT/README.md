@@ -21,7 +21,7 @@ Upon interacting with BankGPT, several behaviours stood out immediately:
 - Direct requests for sensitive data are denied
 - The bot explains why certain requests are not allowed
 
-![BankGPT chatbot interface showing policy-focused responses](BankGPT/screenshots/chatbot_interface.png)
+![BankGPT chatbot interface showing policy-focused responses](screenshots/chatbot_interface.png)
 
 This behaviour is important, as explaining restrictions can unintentionally reveal how a system reasons internally.
 
