@@ -6,6 +6,8 @@ The chatbot is designed to follow strict security policies and prevent disclosur
 
 The challenge demonstrates how poorly handled policy enforcement and natural-language explanations can become an attack vector.
 
+https://tryhackme.com/room/bankgpt
+
 ---
 
 ## Objective
